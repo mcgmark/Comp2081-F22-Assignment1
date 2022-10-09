@@ -103,6 +103,22 @@ body {
   background-color: var(--bg);
 }
 
+a,
+a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button:hover {
+  background-color: #fff !important;
+  color: var(--textgreen) !important;
+  font-weight: 700 !important;
+}
+
 ul {
   list-style: none;
   display: flex;
@@ -477,20 +493,20 @@ main {
 
 @media screen and (min-width: 750px) {
   #counter {
-    height: 250px;
+    height: 220px;
   }
 
   #counter>div>section {
     text-align: center;
-    padding: 30px 40px;
+    padding: 20px 40px;
   }
 
   #counter>div>section>h2 {
-    font-size: 4.25em;
+    font-size: 3.75em;
   }
 
   #counter>div>section>p {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
 }
 
@@ -673,6 +689,10 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#services img {
+  box-shadow: 0px 0px 50px rgba(43, 43, 43, 0.367);
 }
 
 #services>section:nth-of-type(1) {
