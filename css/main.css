@@ -139,10 +139,23 @@ header #logo-nav ul,
 #services,
 #services>section>article,
 #call-to-action>div,
-footer>div{
+footer>div {
   max-width: var(--maxwidth);
   margin-right: auto;
   margin-left: auto;
+}
+
+header #welcome-ticker,
+#about-us>div:first-child,
+#about-us>article#about>h2,
+#about-us>div>h3,
+#services>div>h2,
+#services>section:nth-of-type(2)>h2,
+#services>section>article>h3,
+#reviews>div>div>div>i,
+#reviews>div:nth-child(1)>h2,
+#reviews>div>div>article>ul>li {
+  color: var(--textgreen);
 }
 
 header,
@@ -152,8 +165,6 @@ header div#mobile-quick-links,
 footer>div>div>div>form>div>button {
   background-color: var(--bgsection);
 }
-
-
 
 /* Header Start */
 
@@ -165,7 +176,6 @@ header #welcome-ticker {
   background-color: var(--bg);
   text-align: center;
   font-weight: 300;
-  color: var(--textgreen);
   display: none;
 }
 
@@ -244,6 +254,16 @@ header #logo-nav li {
 
 main {
   grid-area: main;
+  display: grid;
+  /* row-gap: 50px; */
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas:
+    "picture-grid"
+    "counter"
+    "about-us"
+    "call-to-action"
+    "reviews";
 }
 
 /* Main Styles End */
@@ -251,6 +271,7 @@ main {
 /* Picture Grid Styles Start */
 
 #picture-grid {
+  grid-area: picture-grid;
   width: 100%;
   height: 500px;
   display: grid;
@@ -267,66 +288,71 @@ main {
 
 #picture-grid div:nth-of-type(1) {
   background-image: url("../img/garden-1.png");
+  /* Photo Credit : https://www.veranda.com/outdoor-garden/a32381715/how-to-create-a-living-wall/ */
   background-position: bottom;
   grid-column: 1 / 5;
 }
 
 #picture-grid div:nth-of-type(2) {
   background-image: url("../img/garden-2.png");
+  /* Photo Credit : https://www.hivelylandscapes.com/2017/07/container-gardening-tips/ */
   grid-column: 5 / 13;
 }
 
 #picture-grid div:nth-of-type(3) {
   background-image: url("../img/garden-3.png");
+  /* Photo Credit : https://foyr.com/learn/best-home-garden-ideas/ */
   grid-column: 1 / 8;
 }
 
 #picture-grid div:nth-of-type(4) {
   background-image: url("../img/garden-4.png");
+  /* Photo Credit : https://foyr.com/learn/best-home-garden-ideas/ */
   grid-column: 8 / 13;
 }
 
 #picture-grid div:nth-of-type(5) {
   background-image: url("../img/garden-5.png");
+  /* Photo Credit : https://co.pinterest.com/pin/528680443763845344/ */
   background-position: center;
   grid-column: 1 / 4;
 }
 
 #picture-grid div:nth-of-type(6) {
   background-image: url("../img/garden-9.png");
+  /* Photo Credit : https://www.homedepot.com/c/ai/front-yard-landscaping-ideas/9ba683603be9fa5395fab9015f6785cf */
   background-position: bottom;
   grid-column: 4 / 13;
 }
 
 #picture-grid div:nth-of-type(7) {
   background-image: url("../img/garden-6.png");
+  /* Photo Credit : https://www.daviddomoney.com/grow-up-vertical-gardening-for-small-spaces/ */
   display: none;
 }
 
 #picture-grid div:nth-of-type(8) {
   background-image: url("../img/garden-8.png");
+  /* Photo Credit : https://www.homedepot.com/c/ai/front-yard-landscaping-ideas/9ba683603be9fa5395fab9015f6785cf */
   display: none;
 }
 
 #picture-grid div:nth-of-type(9) {
+  /* Photo Credit : https://www.homedepot.com/c/ai/front-yard-landscaping-ideas/9ba683603be9fa5395fab9015f6785cf */
   background-image: url("../img/garden-7.png");
   display: none;
 }
 
 #picture-grid div:nth-of-type(10) {
+  /* Photo Credit : https://www.homedepot.com/c/ai/front-yard-landscaping-ideas/9ba683603be9fa5395fab9015f6785cf */
   background-image: url("../img/garden-10.png");
   display: none;
 }
 
 #picture-grid div:nth-of-type(11) {
+  /* Photo Credit : https://www.homedepot.com/c/ai/front-yard-landscaping-ideas/9ba683603be9fa5395fab9015f6785cf */
   background-image: url("../img/garden-11.png");
   display: none;
-}
-
-#picture-grid div:nth-of-type(12) {
-  background-image: url("../img/garden-1.png");
-  display: none;
-  /* grid-column: 5 / 13; */
 }
 
 @media screen and (min-width: 800px) {
@@ -358,12 +384,13 @@ main {
     background-position: bottom;
   }
 }
+
 /* Picture Grid Styles Start */
 
 /* Counter Start */
 #counter {
+  grid-area: counter;
   height: 150px;
-  margin-top: 10px;
   color: var(--textwhite);
   display: flex;
   flex-direction: column;
@@ -426,6 +453,7 @@ main {
 }
 
 @media screen and (min-width: 300px) {
+
   #counter>div>section:nth-of-type(1),
   #counter span:nth-of-type(1),
   #counter>div>section:nth-of-type(4) {
@@ -433,13 +461,14 @@ main {
   }
 }
 
-@media screen and (min-width: 400px){
+@media screen and (min-width: 400px) {
   #counter span:nth-of-type(1) {
     display: block;
   }
 }
 
 @media screen and (min-width: 500px) {
+
   #counter>div>section:nth-of-type(2),
   #counter span:nth-of-type(2) {
     display: block;
@@ -448,7 +477,7 @@ main {
 
 @media screen and (min-width: 750px) {
   #counter {
-    height: 19vh;
+    height: 250px;
   }
 
   #counter>div>section {
@@ -486,6 +515,7 @@ main {
 
 /* About Us Section Start */
 #about-us {
+  grid-area: about-us;
   padding-right: 3%;
   padding-left: 3%;
   display: grid;
@@ -506,7 +536,6 @@ main {
   margin-top: 30px;
   align-self: center;
   text-align: center;
-  color: var(--textgreen);
 }
 
 #about-us>div:first-child>h1 {
@@ -514,20 +543,23 @@ main {
   text-shadow: 2px 2px 0px rgba(106, 106, 106, 0.637);
 }
 
-#about-us>div:first-child>h1>span:nth-of-type(1) {   /* Design */
+#about-us>div:first-child>h1>span:nth-of-type(1) {
+  /* Design */
   font-family: 'Roboto Slab', 'Times New Roman', Times, serif;
   font-size: 95%;
   letter-spacing: -.04em;
 }
 
-#about-us>div:first-child>h1>span:nth-of-type(2) { /* Build */
+#about-us>div:first-child>h1>span:nth-of-type(2) {
+  /* Build */
   font-family: 'Yellowtail', sans-serif;
   padding-right: .1em;
   font-size: 105%;
   font-weight: 300;
 }
 
-#about-us>div:first-child>h1>span:nth-of-type(3) { /* Maintain */
+#about-us>div:first-child>h1>span:nth-of-type(3) {
+  /* Maintain */
   letter-spacing: -.06em;
   font-size: 95%;
 }
@@ -549,7 +581,6 @@ main {
 
 #about-us>article#about>h2 {
   font-size: 2em;
-  color: var(--textgreen);
   margin: 0px;
 }
 
@@ -584,7 +615,6 @@ main {
 }
 
 #about-us>div>h3 {
-  color: var(--textgreen);
   font-weight: 600;
   font-size: 1.6em;
   margin-bottom: 0px;
@@ -615,7 +645,7 @@ main {
 
 @media screen and (min-width: 800px) {
   #about-us>div:first-child>h1 {
-    font-size: 7.5em;
+    font-size: 5.5em;
     text-shadow: 1px 1px 0px rgba(149, 149, 149, 0.637);
     margin-top: 30px;
     margin-bottom: 0px;
@@ -665,7 +695,6 @@ main {
 #services>div>h2,
 #services>section:nth-of-type(2)>h2 {
   font-size: 2.5em;
-  color: var(--textgreen);
   font-weight: 300;
   margin: 0px;
 }
@@ -690,7 +719,6 @@ main {
 }
 
 #services>section>article>h3 {
-  color: var(--textgreen);
   font-size: 1.55em;
   font-weight: 400;
   margin-top: 25px;
@@ -721,6 +749,14 @@ main {
 
 /* Call To Action Section Start */
 
+#call-to-action {
+  grid-area: call-to-action;
+  background-image: url('../img/shovel-icon.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 55%;
+}
+
 #call-to-action>div {
   max-width: calc(var(--maxwidth) - 200px);
   padding: 0px 40px;
@@ -731,10 +767,6 @@ main {
   grid-template-areas:
     "text text"
     "form form";
-    background-image: url('../img/shovel-icon.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #call-to-action>div>section {
@@ -820,9 +852,12 @@ footer>div>div>div>form>div>#email {
 
 /* Reviews Section Start */
 
+#reviews {
+  grid-area: reviews;
+}
+
 #reviews>div>div>div>i {
   font-size: 13em;
-  color: var(--textgreen);
 }
 
 #reviews>div:nth-child(2) {
@@ -838,7 +873,6 @@ footer>div>div>div>form>div>#email {
 
 #reviews>div:nth-child(1)>h2 {
   font-size: 3.5em;
-  color: var(--textgreen);
   font-weight: 100;
   margin: 0px;
 }
@@ -871,6 +905,7 @@ footer>div>div>div>form>div>#email {
   margin-top: -50px;
   align-self: center;
   background-image: url('../img/customer-1.jpg');
+  /* Photo Credit: https://www.pikist.com/free-photo-xlram */
   background-size: cover;
   background-position: center center;
   border-radius: 100px;
@@ -895,25 +930,53 @@ footer>div>div>div>form>div>#email {
 
 #reviews>div>div>article>ul>li {
   display: inline;
-  color: var(--textgreen);
   list-style-position: outside;
 }
 
-#reviews>div:nth-of-type(2)>div:nth-child(1){
+#reviews>div:nth-of-type(2)>div:nth-child(1) {
   display: block;
 }
-#reviews>div:nth-of-type(2)>div:nth-child(2){
+
+#reviews>div:nth-of-type(2)>div:nth-child(2) {
   display: none;
 }
-#reviews>div:nth-of-type(2)>div:nth-child(3){
+
+#reviews>div:nth-of-type(2)>div:nth-child(3) {
   display: none;
 }
-#reviews>div:nth-of-type(2)>div:nth-child(4){
+
+#reviews>div:nth-of-type(2)>div:nth-child(4) {
   display: none;
 }
-#reviews>div:nth-of-type(2)>div:nth-child(5){
+
+#reviews>div:nth-of-type(2)>div:nth-child(5) {
   display: none;
 }
+
+@media screen and (min-width: 650px) {
+  #reviews>div:nth-of-type(2)>div:nth-child(2) {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #reviews>div:nth-of-type(2)>div:nth-child(3) {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #reviews>div:nth-of-type(2)>div:nth-child(4) {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  #reviews>div:nth-of-type(2)>div:nth-child(5) {
+    display: block;
+  }
+}
+
 
 /* Reviews Section End */
 
@@ -930,19 +993,19 @@ footer>div {
   align-items: center;
 }
 
-footer>div>div{
+footer>div>div {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas: 
-  "menu menu"
-  "location location"
-  "form form"
-  "footer footer";
+  grid-template-areas:
+    "menu menu"
+    "location location"
+    "form form"
+    "footer footer";
 }
 
-footer>div>div>div:nth-child(1){
+footer>div>div>div:nth-child(1) {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -950,12 +1013,12 @@ footer>div>div>div:nth-child(1){
   grid-area: location;
 }
 
-footer>div>div>div:nth-child(2){
- display: none;
+footer>div>div>div:nth-child(2) {
+  display: none;
   grid-area: menu;
 }
 
-footer>div>div>div:nth-child(3){
+footer>div>div>div:nth-child(3) {
   grid-area: form;
   display: flex;
   justify-content: center;
@@ -963,12 +1026,12 @@ footer>div>div>div:nth-child(3){
   width: 100%;
 }
 
-footer>div>div>div:nth-child(4){
+footer>div>div>div:nth-child(4) {
   grid-area: footer;
   width: 100%;
 }
 
-footer>div>div>div>img{
+footer>div>div>div>img {
   width: 180px;
   margin-bottom: 20px;
 }
@@ -996,35 +1059,36 @@ footer>div>div>div>p {
 
 footer>div>div>div:last-of-type>p {
   font-size: 1em;
-} 
+}
 
 footer>div>div>div>form>div>#email,
 footer>div>div>div>form>div>button {
- width: 300px;
+  width: 300px;
 }
 
 @media screen and (min-width: 1000px) {
-  footer>div>div{
-    grid-template-areas: 
-    "location menu"
-    "location form"
-    "footer footer";
+  footer>div>div {
+    grid-template-areas:
+      "location menu"
+      "location form"
+      "footer footer";
   }
 
-  footer>div>div>div:nth-child(2){
+  footer>div>div>div:nth-child(2) {
     display: block;
   }
 
   footer>div>div>div>form>div>#email,
   footer>div>div>div>form>div>button {
-  width: 400px;
+    width: 400px;
+  }
+
+  footer>div>div>div:nth-child(1) {
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 
-footer>div>div>div:nth-child(1){
-  align-items: flex-start;
-  text-align: left;
-}
-}
 /* Footer Styles End */
 
 
