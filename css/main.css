@@ -303,71 +303,71 @@ main {
 }
 
 #picture-grid div:nth-of-type(1) {
-  background-image: url("../img/garden-1.png");
+  background-image: url("../img/garden-1.jpg");
   /* Photo Credit : https://www.veranda.com/outdoor-garden/a32381715/how-to-create-a-living-wall/ */
   background-position: bottom;
   grid-column: 1 / 5;
 }
 
 #picture-grid div:nth-of-type(2) {
-  background-image: url("../img/garden-2.png");
+  background-image: url("../img/garden-2.jpg");
   /* Photo Credit : https://www.hivelylandscapes.com/2017/07/container-gardening-tips/ */
   grid-column: 5 / 13;
 }
 
 #picture-grid div:nth-of-type(3) {
-  background-image: url("../img/garden-3.png");
+  background-image: url("../img/garden-3.jpg");
   /* Photo Credit : https://foyr.com/learn/best-home-garden-ideas/ */
   grid-column: 1 / 8;
 }
 
 #picture-grid div:nth-of-type(4) {
-  background-image: url("../img/garden-4.png");
+  background-image: url("../img/garden-4.jpg");
   /* Photo Credit : https://foyr.com/learn/best-home-garden-ideas/ */
   grid-column: 8 / 13;
 }
 
 #picture-grid div:nth-of-type(5) {
-  background-image: url("../img/garden-5.png");
+  background-image: url("../img/garden-5.jpg");
   /* Photo Credit : https://co.pinterest.com/pin/528680443763845344/ */
   background-position: center;
   grid-column: 1 / 4;
 }
 
 #picture-grid div:nth-of-type(6) {
-  background-image: url("../img/garden-9.png");
+  background-image: url("../img/garden-9.jpg");
   /* Photo Credit : https://www.homedepot.com/c/ai/front-yard-landscaping-ideas/9ba683603be9fa5395fab9015f6785cf */
   background-position: bottom;
   grid-column: 4 / 13;
 }
 
 #picture-grid div:nth-of-type(7) {
-  background-image: url("../img/garden-6.png");
+  background-image: url("../img/garden-6.jpg");
   /* Photo Credit : https://www.daviddomoney.com/grow-up-vertical-gardening-for-small-spaces/ */
   display: none;
 }
 
 #picture-grid div:nth-of-type(8) {
-  background-image: url("../img/garden-8.png");
+  background-image: url("../img/garden-8.jpg");
   /* Photo Credit : https://www.homedepot.com/c/ai/front-yard-landscaping-ideas/9ba683603be9fa5395fab9015f6785cf */
   display: none;
 }
 
 #picture-grid div:nth-of-type(9) {
   /* Photo Credit : https://www.homedepot.com/c/ai/front-yard-landscaping-ideas/9ba683603be9fa5395fab9015f6785cf */
-  background-image: url("../img/garden-7.png");
+  background-image: url("../img/garden-7.jpg");
   display: none;
 }
 
 #picture-grid div:nth-of-type(10) {
   /* Photo Credit : https://www.homedepot.com/c/ai/front-yard-landscaping-ideas/9ba683603be9fa5395fab9015f6785cf */
-  background-image: url("../img/garden-10.png");
+  background-image: url("../img/garden-10.jpg");
   display: none;
 }
 
 #picture-grid div:nth-of-type(11) {
   /* Photo Credit : https://www.homedepot.com/c/ai/front-yard-landscaping-ideas/9ba683603be9fa5395fab9015f6785cf */
-  background-image: url("../img/garden-11.png");
+  background-image: url("../img/garden-11.jpg");
   display: none;
 }
 
