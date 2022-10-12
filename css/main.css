@@ -820,6 +820,7 @@ main {
 #call-to-action>div>aside {
   grid-area: form;
   width: 100%;
+  text-align: center;
 }
 
 #call-to-action>div>aside>form>div>button,
